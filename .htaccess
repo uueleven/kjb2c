@@ -1,0 +1,17 @@
+<FilesMatch "\.(bak|inc|lib|sh|tpl|lbi|dwt)$">
+    order deny,allow
+    deny from all
+</FilesMatch>
+
+RewriteEngine On
+#RewriteBase /
+
+# direct one-word access
+RewriteRule ^&(.*)$    index\.php [L]
+RewriteRule ^category$      index\.php [L]
+
+# access any object by its numeric identifier
+RewriteRule ^feed-c([0-9]+)\.xml$       feed\.php\?cat=$1 [L]
+RewriteRule ^feed-b([0-9]+)\.xml$       feed\.php\?brand=$1 [L]
+RewriteRule ^feed-type([^-]+)\.xml$       feed\.php\?type=$1 [L]
+RewriteRule ^feed\.xml$                 feed\.php [L]
