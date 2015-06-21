@@ -1,6 +1,6 @@
 #images文件夹测试
 /images
-test.php
+/*.php
 
 # Windows image file caches
 Thumbs.db
