@@ -7,4 +7,4 @@ include_once(ROOT_PATH."includes/lib_order.php");
 $txt = file_get_contents(ROOT_PATH."invoice.txt");
 preg_match_all('/￥(\d+)/si', $txt, $matches);
 print(array_sum($matches[1]) );
-print('test');
+print('test');										 asdfasdfasfsadfasdf
